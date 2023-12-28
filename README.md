@@ -21,7 +21,7 @@ data  = readRDS("H:/SCAR_ZONG/Cancer/SCAR_Atlas_0686.rds")
 DimPlot(data)
 ```
 
-![Picture1](pic\Picture1.png)
+![Picture1](pic/Picture1.png)
 
 ```R
 data$Group <- ifelse(grepl("Malignant", data$cell_type), "Malignant", "Normal")
@@ -29,7 +29,7 @@ Idents(data) = data$Group
 DimPlot(data)
 ```
 
-![Picture2](pic\Picture2.png)
+![Picture2](pic/Picture2.png)
 
 ```r
 DEG = FindMarkers(data,ident.1 = "Malignant",ident.2 = "Normal")
